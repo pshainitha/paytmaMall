@@ -1,0 +1,15 @@
+package com.paytmmall;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PaytmMallApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PaytmMallApplication.class, args);
+		
+	}
+	
+	
+}
