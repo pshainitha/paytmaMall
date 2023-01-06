@@ -1,5 +1,7 @@
 package com.paytmmall.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,10 +16,12 @@ import lombok.Data;
 @Component
 @Table
 @Data
-public class UserInfo {
+/* User class with its attributes */
+public class UserInfo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
+	int userid;
 	String email;
 	String password;
+
 }

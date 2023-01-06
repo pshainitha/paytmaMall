@@ -14,16 +14,17 @@ import com.paytmmall.entities.PaytmMallProducts;
 public interface PaytmmallDao extends JpaRepository<PaytmMallBrand, Integer>{
 
 	
-	
+	//get the list of brands by its name
 	@Query("From PaytmMallBrand p where p.name=:brandName")
 	public List<PaytmMallBrand> findByName(String brandName);
 
 	
+	//get the List of products using brand name
 	@Query(value="SELECT pb.paytmMallProducts From PaytmMallBrand pb where pb.name=:brandname")
 	public List<PaytmMallProducts> getproductbyBrandname(@Param("brandname") String brandname);
 
 
-//	public List<PaytmMallProducts> findByPriceBetween(int min, int max);
+
 
 
 	

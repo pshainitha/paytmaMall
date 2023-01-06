@@ -19,13 +19,15 @@ import lombok.Data;
 @Entity
 @Table
 @Component
+/* Brand class with its attributes */
 public class PaytmMallBrand {
-    @Id
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int bid;
 	String name;
 	String imgUrl;
-	
+
+	// one to many relationship with PaytmMallProducts class
 	@OneToMany(targetEntity = PaytmMallProducts.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "brand_id", referencedColumnName = "bid")
 	private List<PaytmMallProducts> paytmMallProducts;

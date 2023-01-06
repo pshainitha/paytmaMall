@@ -14,11 +14,12 @@ import lombok.Data;
 @Table
 @Component
 @Data
+/* Products class with its attributes */
 public class PaytmMallProducts {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int pid;
 	public int price;
-	
-	} 
+
+}
